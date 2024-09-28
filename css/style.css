@@ -55,3 +55,21 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+/* Style for the event list */
+.event-list {
+    list-style-type: none; /* Remove default bullets */
+    padding: 0; /* Remove padding */
+    font-family: 'Arial', sans-serif; /* Consistent font */
+    font-size: 16px; /* Font size */
+    color: #333; /* Dark gray text color */
+}
+
+.event-list li {
+    padding: 10px 0; /* Padding between events */
+    border-bottom: 1px solid #ccc; /* Add a subtle separator between events */
+}
+
+.event-list li:last-child {
+    border-bottom: none; /* Remove border from the last item */
+}

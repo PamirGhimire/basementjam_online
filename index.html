@@ -7,49 +7,16 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header style="background-color: #000000; padding: 10px 0; position: relative;">
-        <!-- Container for logo and title -->
-        <div style="display: flex; justify-content: center; align-items: center;">
-            <!-- High-resolution Logo Image in a Circle -->
-            <img src="logo_BasementJam.jpg" alt="BasementJam Logo" style="border-radius: 50%; width: 80px; height: 80px; margin-right: 15px;">
-            <!-- Title Text -->
-            <h1 style="margin: 0; color: white; font-family: 'Arial', sans-serif;">BasementJam</h1>
-        </div>
-    </header>
-    
-    
-    <!-- Navigation Bar -->
-    <nav style="background-color: #000000; padding: 15px 0;">
-        <ul style="list-style-type: none; margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; font-size: 18px; font-family: 'Arial', sans-serif;">
-            <li style="margin: 0 20px;">
-                <a href="#" style="color: white; text-decoration: none;">Home</a>
-            </li>
-            <li style="margin: 0 20px;">
-                <a href="#" style="color: white; text-decoration: none;">Setlist</a>
-            </li>
-            <li style="margin: 0 20px;">
-                <a href="#" style="color: white; text-decoration: none;">Gallery</a>
-            </li>
-            <li style="margin: 0 20px;">
-                <a href="#" style="color: white; text-decoration: none;">Contact Us</a>
-            </li>
-            <!-- <li style="margin: 0 20px;">
-                <a href="#" style="color: white; text-decoration: none;">Shop</a>
-            </li> -->
-            
-            <!-- Social Icons -->
-            <li style="margin: 0 20px;">
-                <a href="https://www.youtube.com/@basementjamstuttgart" target="_blank">
-                    <img src="logo_YouTube.png" alt="YouTube" style="width: 40px; height: 40px;">
-                </a>
-            </li>
-            <li style="margin: 0 20px;">
-                <a href="https://www.instagram.com/basementjamstuttgart" target="_blank">
-                    <img src="logo_Instagram.webp" alt="Instagram" style="width: 28px; height: 28px;">
-                </a>
-            </li>
-        </ul>
-    </nav>
+    <!-- Placeholder for the header -->
+    <div id="header-placeholder"></div>
+    <!-- Script to load header -->
+    <script>
+        fetch('common/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
 
     <main>
         <button id="languageButton" onclick="toggleLanguageOnHomepage()" style="padding: 10px 20px; background-color: #000000; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">
@@ -57,28 +24,33 @@
         </button>
         
         <br> 
-
+    
         <!-- Insert the band image here -->
         <img src="cover_image_BasementJam.jpg" alt="BasementJam Band Photo" style="width:100%; max-width:1200px; margin-top:10px;">
-
+    
         <div id="Intro_text_Deutsch">
             <h2>Willkommen Bei BasementJam!</h2>
             <p>Entstanden 2023 in einem Kellerproberaum in Stuttgart Ost, ist BasementJam eine vierköpfige Band, die Pop, Rock, Indie, Urban Blues und UK-Hip-Hop mixt. BasementJam spielt sowohl Covers als auch eigene Songs, die sofort ins Ohr gehen und lange im Kopf bleiben.</p>
-
+    
             <h3>Kommende Events</h3>
-            <p>15. Oktober 2024 @Rosenau, Stuttgart</p>            
+            <ul class="event-list">
+                <li>15. Oktober 2024 @Rosenau, Stuttgart</li>
+            </ul>
         </div>
         
         <div id="Intro_text_English" style="display:none;">
             <h2>Welcome to BasementJam</h2>
             <p>Formed in 2023 in an underground rehearsal room in Stuttgart Ost, BasementJam is a four-piece band blending pop, rock, indie, urban blues, and UK hip-hop influences. BasementJam does covers and original music that hooks you instantly, and stays with you long after.</p>
-
+            
             <h3>Upcoming Events</h3>
-            <p>October 15, 2024 @Rosenau, Stuttgart</p>
+            <ul class="event-list">
+                <li>October 15, 2024 @Rosenau, Stuttgart</li>
+            </ul>
         </div>
-
+        
         <script src="js/script.js"></script>
     </main>
+    
 
     <footer>
         <p>&copy; 2024 BasementJam. All rights reserved.</p>

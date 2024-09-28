@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set List - BasementJam</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- Ensure this CSS file is linked -->
+</head>
+<body style="background-color: #f8f8f8; color: black; font-family: 'Arial', sans-serif;"> <!-- Match the main page colors -->
+
+    <!-- Placeholder for the header -->
+    <div id="header-placeholder"></div>
+    <!-- Script to load header -->
+    <script>
+        fetch('/common/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
+
+    <!-- Set List Content -->
+    <section style="padding: 30px;">
+        <h1 style="color: black; font-size: 36px; text-align: center;">SET LIST</h1>
+
+        <div style="display: flex; justify-content: center; gap: 50px; flex-wrap: wrap; padding-top: 20px;">
+            <div>
+                <ul style="list-style-type: none; padding-left: 0; color: black;">
+                    <li>Ain't Nobody</li>
+                    <li>Beds Are Burning</li>
+                    <li>Born This Way</li>
+                    <li>Break Free</li>
+                    <li>Backstreet Medley</li>
+                    <li>Don't Speak</li>
+                    <li>Easy</li>
+                    <li>Eight Days a Week</li>
+                    <li>Escape</li>
+                    <li>Everything Will Be Alright</li>
+                </ul>
+            </div>
+            <div>
+                <ul style="list-style-type: none; padding-left: 0; color: black;">
+                    <li>Fields of Gold</li>
+                    <li>Hallelujah</li>
+                    <li>I Will Survive</li>
+                    <li>Ich Weiss, Was Ich Will</li>
+                    <li>Juice</li>
+                    <li>König von Deutschland</li>
+                    <li>I’m Still Standing</li>
+                    <li>Little Wing</li>
+                    <li>Love of My Life</li>
+                    <li>Love Yourself</li>
+                </ul>
+            </div>
+            <div>
+                <ul style="list-style-type: none; padding-left: 0; color: black;">
+                    <li>Lovely Day</li>
+                    <li>Natural Woman</li>
+                    <li>Girls Just Wanna Have Fun</li>
+                    <li>Proud Mary</li>
+                    <li>White Room</li>
+                    <li>Royals</li>
+                    <li>Shake It Off</li>
+                    <li>Sisters Are Doing It for Themselves</li>
+                    <li>Son of a Preacher Man</li>
+                    <li>Valery</li>
+                </ul>
+            </div>
+        </div>
+        <p style="text-align: center; padding-top: 20px;">...und viele mehr!</p>
+    </section>
+
+</body>
+</html>
