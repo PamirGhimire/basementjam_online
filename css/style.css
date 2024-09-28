@@ -45,13 +45,13 @@ main section {
     margin-bottom: 20px;
 }
 
-/* Footer */
+/* Ensure that the footer sticks to the bottom */
 footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
+    background-color: #2e2e2e; 
+    color: white;
+    text-align: center; 
+    padding: 10px 0; 
+    position: relative; /* Ensures footer doesn't overlap */
     bottom: 0;
     width: 100%;
 }
