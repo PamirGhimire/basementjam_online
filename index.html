@@ -7,19 +7,20 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header style="background-color: #000000; padding: 10px 0;">
+    <header style="background-color: #000000; padding: 10px 0; position: relative;">
         <!-- Container for logo and title -->
         <div style="display: flex; justify-content: center; align-items: center;">
             <!-- High-resolution Logo Image in a Circle -->
             <img src="logo_BasementJam.jpg" alt="BasementJam Logo" style="border-radius: 50%; width: 80px; height: 80px; margin-right: 15px;">
             <!-- Title Text -->
-            <h1 style="margin: 0; color: rgb(255, 255, 255); font-family: 'Arial', sans-serif;">BasementJam</h1>
+            <h1 style="margin: 0; color: white; font-family: 'Arial', sans-serif;">BasementJam</h1>
         </div>
     </header>
     
+    
     <!-- Navigation Bar -->
     <nav style="background-color: #000000; padding: 15px 0;">
-        <ul style="list-style-type: none; margin: 0; padding: 0; display: flex; justify-content: center; font-size: 18px; font-family: 'Arial', sans-serif;">
+        <ul style="list-style-type: none; margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; font-size: 18px; font-family: 'Arial', sans-serif;">
             <li style="margin: 0 20px;">
                 <a href="#" style="color: white; text-decoration: none;">Home</a>
             </li>
@@ -35,9 +36,20 @@
             <li style="margin: 0 20px;">
                 <a href="#" style="color: white; text-decoration: none;">Shop</a>
             </li>
+            
+            <!-- Social Icons -->
+            <li style="margin: 0 20px;">
+                <a href="https://www.youtube.com/@basementjamstuttgart" target="_blank">
+                    <img src="logo_YouTube.png" alt="YouTube" style="width: 40px; height: 40px;">
+                </a>
+            </li>
+            <li style="margin: 0 20px;">
+                <a href="https://www.instagram.com/basementjamstuttgart" target="_blank">
+                    <img src="logo_Instagram.webp" alt="Instagram" style="width: 30px; height: 30px;">
+                </a>
+            </li>
         </ul>
     </nav>
-    
 
     <main>
         <button id="languageButton" onclick="toggleLanguageOnHomepage()" style="padding: 10px 20px; background-color: #000000; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">
