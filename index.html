@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <title>Basement Jam</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -22,41 +22,40 @@
         <!-- Insert the band image here -->
         <img src="cover_image_BasementJam.jpg" alt="BasementJam Band Photo" style="width:100%; max-width:1200px; margin-top:10px;">
 
-        <div style="display: flex; align-items: center; justify-content: space-between;">
-            <h2 id="welcomeText">Willkommen Bei BasementJam!</h2>
-            <button id="languageButton" onclick="toggleLanguageOnHomepage()" style="padding: 10px 20px; background-color: #000000; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; margin-left: 20px;">
+        <!-- Flexbox container for welcome text and button -->
+        <div class="button-container" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; margin-top: 10px;">
+            <h2 id="welcomeText" style="flex: 1; margin: 0;">Willkommen Bei BasementJam!</h2>
+            <button id="languageButton" onclick="toggleLanguageOnHomepage()" style="padding: 10px 20px; background-color: #000000; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; margin-left: 20px; flex-shrink: 0;">
                 English
             </button>
         </div>
         
-        <br> 
+        <br>
 
+        <!-- German text -->
         <div id="Intro_text_Deutsch">
             <p>Entstanden 2023 in einem Kellerproberaum in Stuttgart Ost, ist BasementJam eine vierköpfige Band, die Pop, Rock, Indie, Urban Blues und UK-Hip-Hop mixt. BasementJam spielt sowohl Covers als auch eigene Songs, die sofort ins Ohr gehen und lange im Kopf bleiben.</p>
-
             <h3>Events</h3>
         </div>
-        
+
+        <!-- English text, initially hidden -->
         <div id="Intro_text_English" style="display:none;">
             <p>Formed in 2023 in an underground rehearsal room in Stuttgart Ost, BasementJam is a four-piece band blending pop, rock, indie, urban blues, and UK hip-hop influences. BasementJam does covers and original music that hooks you instantly, and stays with you long after.</p>
-            
             <h3>Events</h3>
         </div>
 
         <!-- All our events so far -->
         <ul class="event-list">
-            <li>October 15, 2024 @Rosenau - Lokalität & Bühne  Rotebühlstraße 109b, 70178 Stuttgart  </li>
+            <li>October 15, 2024 @Rosenau - Lokalität & Bühne  Rotebühlstraße 109b, 70178 Stuttgart</li>
             <li>August 30, 2024 @A&O Hostel Stuttgart City  Rosensteinstraße 14/16, 70191 Stuttgart</li>
             <li>August 2, 2024 @Henkersfest  Wilhelmspl., 70182 Stuttgart</li>
-            <li>June 25, 2024 @Rosenau - Lokalität & Bühne  Rotebühlstraße 109b, 70178 Stuttgart </li>
+            <li>June 25, 2024 @Rosenau - Lokalität & Bühne  Rotebühlstraße 109b, 70178 Stuttgart</li>
             <li>May 18, 2024 @meinSchlossplatz  Kleiner Schloßplatz, 70173 Stuttgart</li>
             <li>February 10, 2024 @Aloft Stuttgart  Heilbronner Str. 70, 70173 Stuttgart</li>
         </ul>
-        
+
         <script src="js/script.js"></script>
     </main>
-
-    
 
     <footer>
         <p>&copy; 2024 BasementJam. All rights reserved.</p>
