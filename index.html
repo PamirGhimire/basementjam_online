@@ -19,24 +19,25 @@
     </script>
 
     <main>
-        <button id="languageButton" onclick="toggleLanguageOnHomepage()" style="padding: 10px 20px; background-color: #000000; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">
-            English
-        </button>
-        
-        <br> 
-    
         <!-- Insert the band image here -->
         <img src="cover_image_BasementJam.jpg" alt="BasementJam Band Photo" style="width:100%; max-width:1200px; margin-top:10px;">
-    
+
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+            <h2 id="welcomeText">Willkommen Bei BasementJam!</h2>
+            <button id="languageButton" onclick="toggleLanguageOnHomepage()" style="padding: 10px 20px; background-color: #000000; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; margin-left: 20px;">
+                English
+            </button>
+        </div>
+        
+        <br> 
+
         <div id="Intro_text_Deutsch">
-            <h2>Willkommen Bei BasementJam!</h2>
             <p>Entstanden 2023 in einem Kellerproberaum in Stuttgart Ost, ist BasementJam eine vierköpfige Band, die Pop, Rock, Indie, Urban Blues und UK-Hip-Hop mixt. BasementJam spielt sowohl Covers als auch eigene Songs, die sofort ins Ohr gehen und lange im Kopf bleiben.</p>
-    
+
             <h3>Events</h3>
         </div>
         
         <div id="Intro_text_English" style="display:none;">
-            <h2>Welcome to BasementJam</h2>
             <p>Formed in 2023 in an underground rehearsal room in Stuttgart Ost, BasementJam is a four-piece band blending pop, rock, indie, urban blues, and UK hip-hop influences. BasementJam does covers and original music that hooks you instantly, and stays with you long after.</p>
             
             <h3>Events</h3>
@@ -54,6 +55,7 @@
         
         <script src="js/script.js"></script>
     </main>
+
     
 
     <footer>
