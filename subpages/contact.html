@@ -1,32 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <style>
-        form {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            background-color: #f9f9f9;
-        }
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-        }
-        button {
-            padding: 10px 20px;
-            background-color: #333;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-    </style>
-</head>
-<body>
+<body style="background-color: #f8f8f8; color: black; font-family: 'Arial', sans-serif; text-align: center; padding: 50px;"> <!-- Match the main page colors -->
+
     <!-- Placeholder for the header -->
     <div id="header-placeholder"></div>
     <!-- Script to load header -->
@@ -37,43 +10,23 @@
                 document.getElementById('header-placeholder').innerHTML = data;
             });
     </script>
-    <h2 style="text-align: center;">Book us and/or send us fan mail! :)</h2>
-    <form id="contactForm">
-        <label for="first_name">Your Name*</label>
-        <input type="text" id="first_name" name="first_name" required>
 
-        <label for="email">Your E-Mail Address*</label>
-        <input type="email" id="email" name="email" required>
+    <section style="padding-top: 40px;">
+        <h2 style="font-size: 24px; color: black; font-family: 'Arial', sans-serif;">Kontakt</h2>
+        <p style="font-size: 18px; line-height: 1.6; max-width: 600px; margin: 0 auto;">
+            Fuer Buchungen oder Fanpost, schreib uns eine E-Mail an <a href="mailto:basementjam7@gmail.com" style="color: #D9534F; text-decoration: none;">basementjam7@gmail.com</a> oder sende uns eine Nachricht auf
+            <a href="https://www.instagram.com/basementjamstuttgart" target="_blank" style="color: #D9534F; text-decoration: none;">Instagram</a>. 
+            Wenn dir eines unserer Videos auf <a href="https://www.youtube.com/@basementjamstuttgart/videos" target="_blank" style="color: #D9534F; text-decoration: none;">YouTube</a> gefaellt, lass uns ein Like und einen Kommentar da!
+        </p>
+    </section>
 
-        <label for="email">Betreff/Subject*</label>
-        <input type="email" id="email" name="email" required>
+    <section style="padding-top: 40px;">
+        <h2 style="font-size: 24px; color: black; font-family: 'Arial', sans-serif;">Contact Us</h2>
+        <p style="font-size: 18px; line-height: 1.6; max-width: 600px; margin: 0 auto;">
+            For bookings and/or fanmail, drop us an email at <a href="mailto:basementjam7@gmail.com" style="color: #D9534F; text-decoration: none;">basementjam7@gmail.com</a>, or send us a message on 
+            <a href="https://www.instagram.com/basementjamstuttgart" target="_blank" style="color: #D9534F; text-decoration: none;">Instagram</a>. 
+            If you like one of our videos on <a href="https://www.youtube.com/@basementjamstuttgart/videos" target="_blank" style="color: #D9534F; text-decoration: none;">YouTube</a>, drop us a like and a comment there!
+        </p>
+    </section>
 
-        <label for="message">Your Message*</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-
-        <button type="submit">Send</button>
-    </form>
-
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            
-            // Collect form data
-            const formData = new FormData(this);
-
-            // Send data to Python script via AJAX
-            fetch('/cgi-bin/send_email.py', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.text())
-            .then(data => {
-                alert(data); // Display response from Python script
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
-        });
-    </script>
 </body>
-</html>
