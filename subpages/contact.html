@@ -1,5 +1,32 @@
-<body style="background-color: #f8f8f8; color: black; font-family: 'Arial', sans-serif;"> <!-- Match the main page colors -->
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
     <!-- Placeholder for the header -->
     <div id="header-placeholder"></div>
     <!-- Script to load header -->
@@ -10,4 +37,43 @@
                 document.getElementById('header-placeholder').innerHTML = data;
             });
     </script>
+    <h2 style="text-align: center;">Book us and/or send us fan mail! :)</h2>
+    <form id="contactForm">
+        <label for="first_name">First Name*</label>
+        <input type="text" id="first_name" name="first_name" required>
+
+        <label for="last_name">Last Name</label>
+        <input type="text" id="last_name" name="last_name">
+
+        <label for="email">E-Mail Address*</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message*</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Send</button>
+    </form>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Collect form data
+            const formData = new FormData(this);
+
+            // Send data to Python script via AJAX
+            fetch('/cgi-bin/send_email.py', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                alert(data); // Display response from Python script
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
 </body>
+</html>
