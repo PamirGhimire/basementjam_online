@@ -1,4 +1,42 @@
-<body style="background-color: #f8f8f8; color: black; font-family: 'Arial', sans-serif;"> <!-- Match the main page colors -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery - BasementJam</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background-color: #f8f8f8;
+            color: black;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Simple grid layout for the gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 10px;
+            padding: 20px;
+            justify-content: center; /* Centers the grid as a whole */
+            max-width: 1200px; /* Set a max width so it's not too wide */
+            margin: 0 auto; /* Center the entire gallery on the page */
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body>
 
     <!-- Placeholder for the header -->
     <div id="header-placeholder"></div>
@@ -10,4 +48,16 @@
                 document.getElementById('header-placeholder').innerHTML = data;
             });
     </script>
+
+    <!-- Gallery Container -->
+    <div class="gallery">
+        <img src="/images/gallery_images/Aloft_BasementJam2.jpg" alt="Aloft BasementJam 2">
+        <img src="/images/gallery_images/Mein schlossplatz_BasementJam.jpg" alt="Mein Schlossplatz BasementJam">
+        <img src="/images/gallery_images/Rosenau_BasementJam.jpg" alt="Rosenau BasementJam">
+        <img src="/images/gallery_images/Forrohouse_BasementJam.jpg" alt="Forrohouse BasementJam">
+        <img src="/images/gallery_images/Aloft_BasementJam.jpg" alt="Aloft BasementJam">
+    </div>
+    
+
 </body>
+</html>
