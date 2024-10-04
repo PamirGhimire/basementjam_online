@@ -5,23 +5,26 @@
     <title>Gallery - BasementJam</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
-        body {
-            background-color: #f8f8f8;
-            color: black;
-            font-family: 'Arial', sans-serif;
-        }
-
-        /* Simple grid layout for the gallery */
+        /* Updated grid layout for the gallery */
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusted for larger grid items */
+            gap: 15px;
             padding: 20px;
-            justify-content: center; /* Centers the grid as a whole */
-            max-width: 1200px; /* Set a max width so it's not too wide */
-            margin: 0 auto; /* Center the entire gallery on the page */
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
+        /* Style the iframe (YouTube video) to fit within the grid */
+        .gallery iframe {
+            width: 100%;
+            aspect-ratio: 16 / 9; /* Use aspect-ratio for dynamic height */
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Style the images */
         .gallery img {
             width: 100%;
             height: auto;
@@ -51,13 +54,23 @@
 
     <!-- Gallery Container -->
     <div class="gallery">
+        <iframe src="https://www.youtube.com/embed/fYPOHMkOaHU?si=dRM_dD85nlyRyqJw" 
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+            gyroscope; picture-in-picture; web-share" allowfullscreen>
+        </iframe>
+        
+        <iframe src="https://www.youtube.com/embed/5er7hEGUYQs?si=jvYFXE80t6gEE3fP" 
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+            gyroscope; picture-in-picture; web-share" allowfullscreen>
+        </iframe>
+
         <img src="/images/gallery_images/Aloft_BasementJam2.jpg" alt="Aloft BasementJam 2">
         <img src="/images/gallery_images/Mein schlossplatz_BasementJam.jpg" alt="Mein Schlossplatz BasementJam">
         <img src="/images/gallery_images/Rosenau_BasementJam.jpg" alt="Rosenau BasementJam">
         <img src="/images/gallery_images/Forrohouse_BasementJam.jpg" alt="Forrohouse BasementJam">
         <img src="/images/gallery_images/Aloft_BasementJam.jpg" alt="Aloft BasementJam">
     </div>
-    
+        
     <footer style = "
         background-color: #000000; 
         color: white;
